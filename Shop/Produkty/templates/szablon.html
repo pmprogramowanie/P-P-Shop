@@ -2,24 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!link rel="stylesheet" href="style.css" type="text/css">
+    <!link rel="reset" href="reset.css">
+    <title>P&P-Shop</title>
 </head>
-<body>
+<body style="background-color:antiquewhite;">
+
 
 </body>
 <div>
-    <h1> P-P-SHOP </h1>
+    <h1>P&P-SHOP</h1>
+    <br>
 </div>
 <div style="clear:both"></div>
 
 <div style="width:200px; float:left">
     <h3> MENU </h3>
-{% for kat in kategorie %}
-<p><a href="/kategoria/{{ kat.id }}"> {{kat.nazwa }}</a></p>
-{% endfor %}
+    {% for kat in kategorie %}
+    <p><a href="/kategoria/{{ kat.id }}"> {{kat.nazwa }}</a></p>
+    {% endfor %}
 </div>
 
 <div style="width:700px; float:left">
-    {% block produkt %}  {% endblock produkt %}
+    {% block produkt %} {% endblock produkt %}
 </div>
 <div style="clear:both"></div>
