@@ -1,20 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import RegisterForm
 from .models import Produkty, Kategoria
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
-
-
-def register(response):
-    if response.method == "POST":
-        dane = RegisterForm(response.POST)
-        if dane.is_valid():
-            dane.save
-        return redirect("http://127.0.0.1:8000/")
-    else:
-        dane = RegisterForm()
-    return render(response, "register.html", {"dane": dane})
 
 
 def index(request):

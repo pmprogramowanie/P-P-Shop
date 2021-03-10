@@ -6,18 +6,71 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="
     sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Witamy w naszym Sklepie!</title>
+    <style type="text/css">
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .Produkty {
+            margin-left: 160px;
+            padding: 0px 10px;
+        }
+    </style>
 </head>
-<body style="background-color:antiquewhite;" >
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/
+<body style="background-color:antiquewhite;">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/
         X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="
         sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="
         sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
-<div>
-    <h1> P-P-SHOP </h1>
+<body>
+<div class="sidenav">
+    <a href="/">Home</a>
+    <a href="/rejestracja">Rejestracja</a>
+    <a href="/kategoria/1/">Monitory</a>
+    <a href="/kategoria/2/">Pamiec</a>
+    <a href="/kategoria/3/">Karty graficzne</a>
+    <a href="/kategoria/4/">Procesory</a>
+    <a href="/kategoria/5/">TV</a>
+    <a href="/kategoria/6/">Drukarki</a>
+    <a href="/kategoria/7/">Dyski</a>
+    <a href="/kategoria/8/">Myszki</a>
+    <a href="/kategoria/9/">Klawiatury</a>
+    <a href="/kategoria/10/">Smartphone</a>
+
+</div>
+<div id="content" , name="content" , class="main">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1 class="mt-2">P&P</h1>
+            <hr class="mt-0 mb-4">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
 </div>
 <div style="clear:both"></div>
 
