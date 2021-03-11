@@ -19,7 +19,6 @@ from django.urls import path, include
 from Produkty.views import kategoria, produkt, index
 from rejestracja import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("rejestracja/", views.rejestracja, name="rejestracja"),
