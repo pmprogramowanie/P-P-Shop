@@ -11,8 +11,9 @@ def rejestracja(response):
         if form.is_valid():
             form.save()
 
-        return redirect("/home")
+        return redirect("/kategoria")
     else:
         form = RegisterForm()
 
     return render(response, "rejestracja.html", {"form": form})
+
