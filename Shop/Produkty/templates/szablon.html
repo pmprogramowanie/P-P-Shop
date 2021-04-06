@@ -31,10 +31,6 @@
             color: #f1f1f1;
         }
 
-        .Produkty {
-            margin-left: 160px;
-            padding: 0px 10px;
-        }
     </style>
 </head>
 <body style="background-color:antiquewhite;">
@@ -45,8 +41,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="
         sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-</body>
-<body>
+
 <div class="sidenav">
     <a href="/">Home</a>
     <a href="/login">Login</a>
@@ -63,7 +58,7 @@
     <a href="/kategoria/10/">Smartphone</a>
 
 </div>
-<div id="content" , name="content" , class="main">
+<div id="content" name="content" class="main">
     <div class="row justify-content-center">
         <div class="col-8">
             <h1 class="mt-2">P&P</h1>
@@ -76,7 +71,6 @@
 <div style="clear:both"></div>
 
 <div style="width:200px; float:left">
-    <h3> MENU </h3>
     {% for kat in kategorie %}
     <p><a href="/kategoria/{{ kat.id }}"> {{kat.nazwa }}</a></p>
     {% endfor %}
@@ -86,3 +80,9 @@
     {% block produkt %} {% endblock produkt %}
 </div>
 <div style="clear:both"></div>
+
+<div style="width:10px; float:right">
+    {% block koszyk %} {% endblock koszyk %}
+
+</div>
+</body>
